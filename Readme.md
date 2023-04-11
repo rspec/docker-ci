@@ -26,7 +26,7 @@ Note how you pass the token to docker is up to you, this is just an example.
 
 ## Build Instructions
 
-1 - `docker build <target>`
-1a - Use `docker image` to find sha for step 2
-2 - `docker tag <result of 1> ghcr.io/rspec/docker-ci:<target>`
-3 - `docker push ghcr.io/rspec/docker-ci:<target>`
+1) `docker build <target>`
+2) Optionally `se `docker image` to find sha for step 3 if you missed it in the build output.
+3) `docker tag <sha from step 1/2> ghcr.io/rspec/docker-ci:<target>`
+4) `docker push ghcr.io/rspec/docker-ci:<target>`
